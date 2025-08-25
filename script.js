@@ -79,3 +79,24 @@ togglePassword.addEventListener("click", () => {
   passwordField.type = type;
   togglePassword.textContent = type === "password" ? "Show" : "Hide";
 });
+function filterProjects() {
+    // Get the search input value and convert to lowercase
+    const input = document.getElementById('projectSearch');
+    const filter = input.value.toLowerCase();
+    
+    // Get all project cards
+    const projects = document.querySelectorAll('#skills .row .card');
+    
+    // Loop through each project card
+    projects.forEach(project => {
+        const title = project.querySelector('.card-title').textContent.toLowerCase();
+        const description = project.querySelector('.card-text').textContent.toLowerCase();
+        
+        // Check if the title or description contains the search term
+        if (title.includes(filter) || description.includes(filter)) {
+            project.parentElement.style.display = ""; // Show the project's parent div
+        } else {
+            project.parentElement.style.display = "none"; // Hide the project's parent div
+        }
+    });
+}
