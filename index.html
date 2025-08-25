@@ -25,8 +25,11 @@
                     <li class="nav-item"> <a class="nav-link active" href="#experience">Experience</a> </li>
                     <li class="nav-item"> <a class="nav-link active" href="#contacts">Contacts</a> </li>
                 </ul>
-                <form class="d-flex"> <input class="form-control me-2" type="search" placeholder="Search"
-                        aria-label="Search"> <button class="btn btn-outline-light" type="submit">Search</button> </form>
+                <form class="d-flex">
+                <input class="form-control me-2" type="search" id="projectSearch" placeholder="Search" aria-label="Search"
+                    onkeyup="filterProjects()">
+                <button class="btn btn-outline-light" type="button" onclick="filterProjects()">Search</button>
+            </form>
             </div>
         </div>
     </nav><!-- section-1 -->
