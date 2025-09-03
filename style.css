@@ -424,6 +424,7 @@ footer {
     border: none;
     outline: none;
     color: white;
+    background-color: #635bff;
     cursor: pointer;
     padding: 12px;
     border-radius: 50%;
